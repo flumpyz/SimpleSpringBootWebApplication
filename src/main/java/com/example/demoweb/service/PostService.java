@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -14,7 +15,7 @@ public class PostService {
         List<String> texts = Arrays.asList("Good", "Cool", "Bad");
 
         for(int i = 0; i < 3; i++) {
-            posts.add(new Post(texts.get(i)));
+            posts.add(new Post(texts.get(i), new Date()));
         }
 
         return posts;
